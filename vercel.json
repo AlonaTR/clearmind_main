@@ -4,9 +4,23 @@
             "src": "clearmind/wsgi.py",
             "use": "@vercel/python",
             "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+        },
+        {
+            "src": "reactapp/package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "reactapp/build"
+            }
         }
     ],
     "routes": [
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+        },
         {
             "src": "/(.*)",
             "dest": "clearmind/wsgi.py"

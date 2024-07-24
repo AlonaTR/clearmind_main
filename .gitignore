@@ -1,7 +1,8 @@
 clearmind/__pycache__
 meditations/__pycache__
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignore staticfiles directory
+staticfiles/
 
 # dependencies
 reactapp/node_modules
