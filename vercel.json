@@ -3,13 +3,17 @@
         {
             "src": "clearmind/wsgi.py",
             "use": "@vercel/python",
-            "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+            "config": { 
+                "maxLambdaSize": "15mb", 
+                "runtime": "python3.9"
+            }
         },
         {
             "src": "reactapp/package.json",
             "use": "@vercel/static-build",
             "config": {
-                "distDir": "reactapp/build"
+                "distDir": "reactapp/build",
+                "buildCommand": "npm install && npm run build"
             }
         }
     ],
@@ -25,5 +29,10 @@
             "src": "/(.*)",
             "dest": "clearmind/wsgi.py"
         }
-    ]
+    ],
+    "build": {
+        "env": {
+            "CUSTOM_BUILD_COMMAND": "pip install -r requirements.txt && python manage.py collectstatic --no-input"
+        }
+    }
 }
