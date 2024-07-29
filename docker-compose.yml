@@ -1,21 +1,21 @@
 version: "3"
 services:
 
-  database:
-    image: postgres:12.7-alpine
-    volumes:
-      - ./backup_data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+  # database:
+  #   image: postgres:12.7-alpine
+  #   volumes:
+  #     - ./backup_data/db:/var/lib/postgresql/data
+  #   environment:
+  #     - POSTGRES_DB=postgres
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
 
   backend:
     build: ./backend
     volumes:
       - ./backend:/app
-    depends_on:
-      - database
+    # depends_on:
+    #   - database
   
   reactapp:
     build: ./reactapp
