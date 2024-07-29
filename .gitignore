@@ -1,8 +1,8 @@
-clearmind/__pycache__
-meditations/__pycache__
+backend/clearmind/__pycache__
+backend/meditations/__pycache__
 
 # Ignore staticfiles directory
-staticfiles/
+backend/staticfiles/
 
 # dependencies
 reactapp/node_modules
@@ -26,4 +26,4 @@ reactapp/npm-debug.log*
 reactapp/yarn-debug.log*
 reactapp/yarn-error.log*
 
-
+myenv/
