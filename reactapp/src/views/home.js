@@ -19,7 +19,7 @@ const Home = (props) => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/api/data`); 
+        const response = await axios.get(`http://127.0.0.1:8000/api/data/`); 
         setData(response.data);
         console.log(response.data);
       } catch (error) {
@@ -80,7 +80,7 @@ const Home = (props) => {
             </span>
           </div>
           <img
-            alt="image"
+            alt="main_img"
             src="https://images.unsplash.com/photo-1572088229035-555d02d90357?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcwMzQ0MzcwOXw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=400"
             className="home-details-image"
           />
