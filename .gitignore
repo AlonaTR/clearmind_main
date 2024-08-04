@@ -1,6 +1,6 @@
 clearmind/__pycache__
 meditations/__pycache__
-
+myenv
 # Ignore staticfiles directory
 staticfiles/
 
