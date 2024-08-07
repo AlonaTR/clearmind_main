@@ -1,0 +1,86 @@
+.test-question-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+}
+.test-question-text {
+  align-self: center;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.test-question-container1 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+}
+.test-question-radiobutton {
+  align-self: center;
+  margin-right: var(--dl-space-space-unit);
+}
+.test-question-text1 {
+  color: var(--dl-color-gray-800);
+  line-height: 1.6;
+}
+.test-question-container2 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+}
+.test-question-radiobutton1 {
+  align-self: center;
+  margin-right: var(--dl-space-space-unit);
+}
+.test-question-text2 {
+  color: var(--dl-color-gray-800);
+  line-height: 1.6;
+}
+.test-question-container3 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+}
+.test-question-radiobutton2 {
+  align-self: center;
+  margin-right: var(--dl-space-space-unit);
+}
+.test-question-text3 {
+  color: var(--dl-color-gray-800);
+  line-height: 1.6;
+}
+.test-question-container4 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+}
+.test-question-radiobutton3 {
+  align-self: center;
+  margin-right: var(--dl-space-space-unit);
+}
+.test-question-text4 {
+  color: var(--dl-color-gray-800);
+  line-height: 1.6;
+}
+

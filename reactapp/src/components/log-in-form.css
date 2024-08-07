@@ -1,0 +1,109 @@
+.log-in-form-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-twounits);
+}
+.log-in-form-text-email {
+  color: var(--dl-color-gray-white);
+  font-size: 13px;
+  align-self: flex-start;
+  text-align: center;
+  line-height: 1.6;
+}
+.log-in-form-input-email {
+  border-color: var(--dl-color-gray-white);
+  border-radius: 45px;
+}
+.log-in-form-text-password {
+  color: var(--dl-color-gray-white);
+  font-size: 13px;
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-oneandhalfunits);
+  text-align: center;
+  line-height: 1.6;
+}
+.log-in-form-input-password {
+  border-color: var(--dl-color-gray-white);
+  border-radius: 45px;
+}
+.log-in-form-hero-sub-heading {
+  color: var(--dl-color-danger-700);
+  font-size: 16px;
+  align-self: center;
+  text-align: center;
+  line-height: 1.6;
+}
+
+
+
+@media(max-width: 1200px) {
+  .log-in-form-container {
+    width: auto;
+    height: auto;
+    align-items: center;
+    padding-top: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-unit);
+  }
+  .log-in-form-text-email {
+    font-size: 11px;
+  }
+  .log-in-form-input-email {
+    border-color: var(--dl-color-gray-white);
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .log-in-form-text-password {
+    font-size: 11px;
+  }
+  .log-in-form-input-password {
+    border-color: var(--dl-color-gray-white);
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .log-in-form-hero-sub-heading {
+    color: var(--dl-color-danger-700);
+    font-size: 16px;
+  }
+}
+@media(max-width: 991px) {
+  .log-in-form-text-email {
+    color: var(--dl-color-gray-white);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: var(--dl-space-space-unit);
+  }
+  .log-in-form-text-password {
+    color: var(--dl-color-gray-white);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
+  .log-in-form-hero-sub-heading {
+    color: var(--dl-color-danger-700);
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: var(--dl-space-space-threeunits);
+    padding-right: var(--dl-space-space-threeunits);
+  }
+}
+@media(max-width: 767px) {
+  .log-in-form-text-email {
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
+  .log-in-form-text-password {
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
+  .log-in-form-hero-sub-heading {
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
+}

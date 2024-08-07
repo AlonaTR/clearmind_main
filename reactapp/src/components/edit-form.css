@@ -1,0 +1,256 @@
+.edit-form-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+  }
+  .edit-form-container1 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+  }
+  .edit-form-container2 {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    margin-right: var(--dl-space-space-twounits);
+    flex-direction: column;
+  }
+  .edit-form-text {
+    fill: var(--dl-color-gray-white);
+    color: var(--dl-color-gray-white);
+    align-self: center;
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .edit-form-text-name {
+    color: var(--dl-color-gray-white);
+    font-size: 13px;
+    align-self: flex-start;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .edit-form-input-name {
+    border-color: var(--dl-color-gray-white);
+    border-width: 0px;
+    border-radius: 45px;
+  }
+  .edit-form-error-name {
+    color: var(--dl-color-danger-700);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .edit-form-text-email {
+    color: var(--dl-color-gray-white);
+    font-size: 13px;
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-unit);
+    text-align: center;
+    line-height: 1.6;
+  }
+  .edit-form-input-email {
+    border-color: var(--dl-color-gray-white);
+    border-radius: 45px;
+  }
+  .edit-form-error-email {
+    color: var(--dl-color-danger-700);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .edit-form-container3 {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    margin-right: var(--dl-space-space-unit);
+    flex-direction: column;
+  }
+  .edit-form-text1 {
+    fill: var(--dl-color-gray-white);
+    color: var(--dl-color-gray-white);
+    align-self: center;
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .edit-form-text-password {
+    color: var(--dl-color-gray-white);
+    font-size: 13px;
+    align-self: flex-start;
+    text-align: center;
+    line-height: 1.6;
+    padding-top: 0px;
+  }
+  .edit-form-input-password {
+    border-color: var(--dl-color-gray-white);
+    border-radius: 45px;
+  }
+  .edit-form-error-password {
+    color: var(--dl-color-danger-700);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .edit-form-text-password2 {
+    color: var(--dl-color-gray-white);
+    font-size: 13px;
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-unit);
+    text-align: center;
+    line-height: 1.6;
+  }
+  .edit-form-input-password2 {
+    border-color: var(--dl-color-gray-white);
+    border-radius: 45px;
+  }
+  .edit-form-error-password2 {
+    color: var(--dl-color-danger-700);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 1200px) {
+    .edit-form-container {
+      width: auto;
+      height: auto;
+      align-items: center;
+      padding-top: var(--dl-space-space-unit);
+      padding-bottom: var(--dl-space-space-unit);
+    }
+    .edit-form-text-name {
+      font-size: 11px;
+      align-self: flex-start;
+    }
+    .edit-form-input-name {
+      border-color: var(--dl-color-gray-white);
+    }
+    .edit-form-error-name {
+      color: var(--dl-color-danger-700);
+      opacity: 1;
+      font-size: 11px;
+      margin-bottom: 0px;
+    }
+    .edit-form-text-email {
+      font-size: 11px;
+      align-self: flex-start;
+      margin-top: var(--dl-space-space-unit);
+    }
+    .edit-form-input-email {
+      border-color: var(--dl-color-gray-white);
+    }
+    .edit-form-error-email {
+      color: var(--dl-color-danger-700);
+      font-size: 11px;
+      margin-bottom: 0px;
+    }
+    .edit-form-text-password {
+      font-size: 11px;
+      align-self: flex-start;
+    }
+    .edit-form-input-password {
+      border-color: var(--dl-color-gray-white);
+    }
+    .edit-form-error-password {
+      color: var(--dl-color-danger-700);
+      font-size: 11px;
+      margin-bottom: 0px;
+    }
+    .edit-form-text-password2 {
+      font-size: 11px;
+      align-self: flex-start;
+      margin-top: var(--dl-space-space-unit);
+    }
+    .edit-form-input-password2 {
+      border-color: var(--dl-color-gray-white);
+    }
+    .edit-form-error-password2 {
+      color: var(--dl-color-danger-700);
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 991px) {
+    .edit-form-text-name {
+      color: var(--dl-color-gray-white);
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.6;
+      padding-left: var(--dl-space-space-twounits);
+    }
+    .edit-form-error-name {
+      color: var(--dl-color-danger-700);
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.6;
+      padding-left: var(--dl-space-space-threeunits);
+      padding-right: var(--dl-space-space-threeunits);
+    }
+    .edit-form-text-email {
+      color: var(--dl-color-gray-white);
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.6;
+      padding-left: var(--dl-space-space-twounits);
+    }
+    .edit-form-error-email {
+      color: var(--dl-color-danger-700);
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.6;
+      padding-left: var(--dl-space-space-threeunits);
+      padding-right: var(--dl-space-space-threeunits);
+    }
+    .edit-form-text-password {
+      color: var(--dl-color-gray-white);
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.6;
+      padding-top: 0px;
+      padding-left: var(--dl-space-space-twounits);
+    }
+    .edit-form-error-password {
+      color: var(--dl-color-danger-700);
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.6;
+      padding-left: var(--dl-space-space-threeunits);
+      padding-right: var(--dl-space-space-threeunits);
+    }
+    .edit-form-text-password2 {
+      color: var(--dl-color-gray-white);
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.6;
+      padding-left: var(--dl-space-space-twounits);
+    }
+    .edit-form-error-password2 {
+      color: var(--dl-color-danger-700);
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.6;
+      padding-left: var(--dl-space-space-threeunits);
+      padding-right: var(--dl-space-space-threeunits);
+    }
+  }
+  @media (max-width: 767px) {
+    .edit-form-error-name {
+      padding-left: var(--dl-space-space-unit);
+      padding-right: var(--dl-space-space-unit);
+    }
+    .edit-form-error-email {
+      padding-left: var(--dl-space-space-unit);
+      padding-right: var(--dl-space-space-unit);
+    }
+    .edit-form-error-password {
+      padding-left: var(--dl-space-space-unit);
+      padding-right: var(--dl-space-space-unit);
+    }
+    .edit-form-error-password2 {
+      padding-left: var(--dl-space-space-unit);
+      padding-right: var(--dl-space-space-unit);
+    }
+  }

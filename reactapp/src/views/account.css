@@ -1,0 +1,381 @@
+.account-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.account-hero {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1703210466517-dcfbbdb157a7?ixid=M3w5MTMyMXwwfDF8YWxsfDYwfHx8fHx8Mnx8MTcwMzUyODcwMXw&ixlib=rb-4.0.3&w=1500');
+}
+.account-hero1 {
+  width: 100%;
+  display: flex;
+  max-width: var(--dl-size-size-maxwidth);
+  min-height: auto;
+  align-items: center;
+  padding-top: var(--dl-space-space-sixunits);
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-sixunits);
+  justify-content: center;
+}
+.account-container1 {
+  gap: var(--dl-space-space-twounits);
+  width: auto;
+  height: auto;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.account-hero-heading {
+  color: var(--dl-color-gray-white);
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  align-self: center;
+  max-height: 240px;
+  text-align: center;
+  font-family: "Raleway";
+  line-height: 1.6;
+}
+.account-container2 {
+  gap: var(--dl-space-space-twounits);
+  width: auto;
+  height: auto;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.account-btn-group {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.account-log-out-button {
+  color: var(--dl-color-gray-white);
+  font-size: 18px;
+  transition: 0.3s;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  border-color: var(--dl-color-primary1-blue100);
+  border-width: 0px;
+  padding-left: 3rem;
+  border-radius: 45px;
+  padding-right: 3rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--dl-color-primary1-blue100);
+}
+.account-log-out-button:hover {
+  color: var(--dl-color-gray-white);
+  border-color: rgba(41, 20, 119, 0.9);
+  background-color: rgba(41, 20, 119, 0.9);
+}
+.account-edit-button {
+  color: var(--dl-color-gray-white);
+  transition: 0.3s;
+  font-weight: bold;
+  padding-top: var(--dl-space-space-unit);
+  border-color: transparent;
+  padding-left: var(--dl-space-space-twounits);
+  padding-right: var(--dl-space-space-twounits);
+  padding-bottom: var(--dl-space-space-unit);
+  background-color: transparent;
+}
+.account-edit-button:hover {
+  border-color: var(--dl-color-gray-white);
+}
+
+.info-account-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-twounits);
+}
+.info-account-details-image {
+  width: var(--dl-size-size-large);
+  height: var(--dl-size-size-large);
+  align-self: center;
+  object-fit: cover;
+  margin-left: 0px;
+  border-radius: var(--dl-radius-radius-round);
+  margin-bottom: var(--dl-space-space-unit);
+}
+.info-account-text-name {
+  color: var(--dl-color-gray-white);
+  font-size: 13px;
+  align-self: center;
+  text-align: center;
+  line-height: 1.6;
+}
+.info-account-text-name1 {
+  color: var(--dl-color-gray-500);
+  width: 100%;
+  font-size: 20px;
+  align-self: center;
+  text-align: center;
+  line-height: 1.6;
+  padding-top: 0.5rem;
+  padding-left: 3rem;
+  border-radius: 45px;
+  padding-right: 3rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--dl-color-gray-white);
+}
+.info-account-text-surname {
+  color: var(--dl-color-gray-white);
+  font-size: 13px;
+  align-self: center;
+  margin-top: var(--dl-space-space-twounits);
+  text-align: center;
+  line-height: 1.6;
+}
+.info-account-text-surname1 {
+  color: var(--dl-color-gray-500);
+  width: 100%;
+  font-size: 20px;
+  align-self: center;
+  text-align: center;
+  line-height: 1.6;
+  padding-top: 0.5rem;
+  padding-left: 3rem;
+  border-radius: 45px;
+  padding-right: 3rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--dl-color-gray-white);
+}
+.info-account-text-email {
+  color: var(--dl-color-gray-white);
+  font-size: 13px;
+  align-self: center;
+  margin-top: var(--dl-space-space-twounits);
+  text-align: center;
+  line-height: 1.6;
+}
+.info-account-text-email1 {
+  color: var(--dl-color-gray-500);
+  width: 100%;
+  font-size: 20px;
+  align-self: center;
+  text-align: center;
+  line-height: 1.6;
+  padding-top: 0.5rem;
+  padding-left: 3rem;
+  border-radius: 45px;
+  padding-right: 3rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--dl-color-gray-white);
+}
+
+@media(max-width: 1200px) {
+  .info-account-container {
+    width: auto;
+    height: auto;
+    align-items: center;
+    padding-top: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-unit);
+  }
+  .info-account-details-image {
+    align-self: center;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .info-account-text-name {
+    font-size: 11px;
+    align-self: center;
+  }
+  .info-account-text-name1 {
+    color: var(--dl-color-gray-500);
+    width: 100%;
+    font-size: 18px;
+    align-self: center;
+    padding-top: 0.5rem;
+    border-style: dashed;
+    border-width: 1px;
+    padding-left: 3rem;
+    border-radius: 45px;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--dl-color-gray-white);
+  }
+  .info-account-text-surname {
+    font-size: 11px;
+    align-self: center;
+    margin-top: var(--dl-space-space-twounits);
+  }
+  .info-account-text-surname1 {
+    color: var(--dl-color-gray-500);
+    width: 100%;
+    font-size: 18px;
+    align-self: center;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    padding-top: 0.5rem;
+    margin-right: 0rem;
+    padding-left: 3rem;
+    border-radius: 45px;
+    margin-bottom: 0rem;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--dl-color-gray-white);
+  }
+  .info-account-text-email {
+    font-size: 11px;
+    align-self: center;
+    margin-top: var(--dl-space-space-twounits);
+  }
+  .info-account-text-email1 {
+    color: var(--dl-color-gray-500);
+    width: 100%;
+    font-size: 18px;
+    align-self: center;
+    margin-top: 0px;
+    padding-top: 0.5rem;
+    padding-left: 3rem;
+    border-radius: 45px;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--dl-color-gray-white);
+  }
+
+  .account-log-out-button {
+    color: var(--dl-color-gray-white);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--dl-color-primary1-blue100);
+  }
+  .account-edit-button {
+    color: var(--dl-color-gray-white);
+    font-weight: bold;
+    background-color: transparent;
+  }
+}
+@media(max-width: 991px) {
+
+  .info-account-text-name {
+    color: var(--dl-color-gray-white);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .info-account-text-name1 {
+    color: var(--dl-color-gray-500);
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 3rem;
+  }
+  .info-account-text-surname {
+    color: var(--dl-color-gray-white);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .info-account-text-surname1 {
+    color: var(--dl-color-gray-500);
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 3rem;
+  }
+  .info-account-text-email {
+    color: var(--dl-color-gray-white);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .info-account-text-email1 {
+    color: var(--dl-color-gray-500);
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+    padding-top: 0.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .account-hero1 {
+    flex-direction: column;
+  }
+  .account-container1 {
+    align-items: center;
+    margin-right: 0px;
+    margin-bottom: var(--dl-space-space-twounits);
+    padding-right: 0px;
+  }
+  .account-hero-heading {
+    text-align: center;
+  }
+  .account-container2 {
+    align-items: center;
+    margin-right: 0px;
+    margin-bottom: var(--dl-space-space-twounits);
+    padding-right: 0px;
+  }
+}
+@media(max-width: 767px) {
+  .info-account-details-image {
+    margin-top: var(--dl-space-space-threeunits);
+    margin-left: 0px;
+  }
+  .info-account-text-surname {
+    padding-right: var(--dl-space-space-unit);
+  }
+  .info-account-text-surname1 {
+    padding-right: 3rem;
+  }
+  .account-hero1 {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .account-container1 {
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+  }
+  .account-container2 {
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+  }
+}
+@media(max-width: 479px) {
+  .account-hero1 {
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-twounits);
+  }
+  .account-container1 {
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .account-container2 {
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .account-btn-group {
+    flex-direction: column;
+  }
+  .account-edit-button {
+    margin-top: var(--dl-space-space-unit);
+    margin-left: 0px;
+  }
+}
