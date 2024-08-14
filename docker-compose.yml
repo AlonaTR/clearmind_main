@@ -1,12 +1,9 @@
 version: "3"
 services:
-
-
   backend:
     build: ./backend
     volumes:
       - ./backend:/app
-  
   reactapp:
     build: ./reactapp
     volumes:
