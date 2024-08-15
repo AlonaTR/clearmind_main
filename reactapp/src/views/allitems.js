@@ -24,7 +24,7 @@ const Allitems = (props) => {
   useEffect(() => {
     const fetchMeditations = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/meditation`);
+        const response = await axios.get(`http://127.0.0.1:8000/api/meditation/`);
         setMeditations(response.data);
       } catch (error) {
         console.error('Error fetching meditations:', error);
@@ -33,7 +33,7 @@ const Allitems = (props) => {
 
     const fetchAffirmations = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/affirmation`);
+        const response = await axios.get(`http://127.0.0.1:8000/api/affirmation/`);
         setAffirmations(response.data);
       } catch (error) {
         console.error('Error fetching affirmations:', error);
@@ -42,7 +42,7 @@ const Allitems = (props) => {
 
     const fetchBreathingExercises = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/breathing`); 
+        const response = await axios.get(`http://127.0.0.1:8000/api/breathing/`); 
         setBreathingExercises(response.data);
       } catch (error) {
         console.error('Error fetching breathing exercises:', error);
@@ -83,7 +83,7 @@ const Allitems = (props) => {
                 <Link to={`/item/${item.id}`} key={item.id}>
                   <GalleryCard11
                     title={item.name}
-                    imageSrc={item.image}
+                    imageSrc={`https://img.youtube.com/vi/${item.video_id}/maxresdefault.jpg`}
                     subtitle={item.info}
                     rootClassName={`rootClassName1${item.id}`}
                   ></GalleryCard11>
@@ -101,7 +101,7 @@ const Allitems = (props) => {
                 <Link to={`/item/${item.id}`} key={item.id}>
                   <GalleryCard11
                     title={item.name}
-                    imageSrc={item.image}
+                    imageSrc={`https://img.youtube.com/vi/${item.video_id}/maxresdefault.jpg`}
                     subtitle={item.info}
                     rootClassName={`rootClassName1${item.id}`}
                   ></GalleryCard11>
@@ -119,7 +119,7 @@ const Allitems = (props) => {
                 <Link to={`/item/${item.id}`} key={item.id}>
                   <GalleryCard11
                     title={item.name}
-                    imageSrc={item.image}
+                    imageSrc={`https://img.youtube.com/vi/${item.video_id}/maxresdefault.jpg`}
                     subtitle={item.info}
                     rootClassName={`rootClassName1${item.id}`}
                   ></GalleryCard11>

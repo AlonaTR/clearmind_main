@@ -10,11 +10,7 @@ import Footer from '../components/footer'
 
 
 const LogIn = (props) => {
-  const history = useHistory();
-
-  const handleHome = () => {
-    history.push('/home'); 
-  };
+  
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [userData, setUserData] = useState(null)
@@ -78,7 +74,19 @@ const LogIn = (props) => {
   
   const handleRegister = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
-    // Perform input validation if necessary
+    
+    // Perform input validation
+    const { username, email, password1, password2 } = registerInfo;
+    if (!username || !email || !password1 || !password2) {
+      setRegisterError('All fields are required');
+      return; // Exit the function if validation fails
+    }
+
+    // Additional password match validation
+    if (password1 !== password2) {
+      setRegisterError('Passwords do not match');
+      return; // Exit the function if password validation fails
+    }
   
     try {
       const response = await fetch('http://127.0.0.1:8000/api/register/', {
@@ -112,13 +120,6 @@ const LogIn = (props) => {
   };
   
 
-
-  const handleLogout = () => {
-    // Clear user from local storage or manage session
-    localStorage.removeItem('user')
-    setIsLoggedIn(false)
-    setUserData(null)
-  }
   return (
     <div className="log-in-container">
       <Helmet>
@@ -153,7 +154,7 @@ const LogIn = (props) => {
               <LogInForm
                 rootClassName="log-in-form-root-class-name"
                 onLogin={handleLogin} 
-                heroSubHeading2={loginError}
+                heroSubHeading2={loginError && loginError[0]}
               />
             )}
             </div>

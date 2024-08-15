@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 CORS_ALLOWED_ORIGINS = [
     'http://localhost',
     'http://127.0.0.1:8000',
+    'http://127.0.0.1:3000',
 ]
 
 
@@ -57,6 +58,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
+
+# For development, you might want to allow all origins:
+# CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'clearmind.urls'
 

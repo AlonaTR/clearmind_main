@@ -1,0 +1,59 @@
+# flyctl launch added from .gitignore
+**\backend\clearmind\__pycache__
+**\backend\meditations\__pycache__
+
+# Ignore staticfiles directory
+**\backend\staticfiles
+
+# dependencies
+**\reactapp\node_modules
+**\reactapp\.pnp
+**\reactapp\.pnp.js
+
+# testing
+**\reactapp\coverage
+
+# production
+**\reactapp\build
+
+# misc
+**\reactapp\.DS_Store
+**\reactapp.env.local
+**\reactapp.env.development.local
+**\reactapp.env.test.local
+**\reactapp.env.production.local
+
+**\reactapp\npm-debug.log*
+**\reactapp\yarn-debug.log*
+**\reactapp\yarn-error.log*
+
+**\myenv
+
+# flyctl launch added from reactapp\.gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+reactapp\node_modules
+reactapp\.pnp
+reactapp\**\.pnp.js
+
+# testing
+reactapp\coverage
+
+# production
+reactapp\build
+
+# misc
+reactapp\**\.DS_Store
+reactapp\**\.env.local
+reactapp\**\.env.development.local
+reactapp\**\.env.test.local
+reactapp\**\.env.production.local
+
+reactapp\**\npm-debug.log*
+reactapp\**\yarn-debug.log*
+reactapp\**\yarn-error.log*
+
+
+reactapp\__pycache__
+fly.toml

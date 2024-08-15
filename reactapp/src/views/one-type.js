@@ -31,7 +31,7 @@ const OneType = ({ match }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/${typename}`); // Use path to our API
+        const response = await axios.get(`http://127.0.0.1:8000/api/${typename}/`); 
         setData(response.data);
         console.log(response.data);
       } catch (error) {
@@ -71,7 +71,7 @@ const OneType = ({ match }) => {
                 <Link to={`/item/${item.id}`} key={item.id}>
                   <GalleryCard11
                   title={item.name}
-                  imageSrc={item.image}
+                  imageSrc={`https://img.youtube.com/vi/${item.video_id}/maxresdefault.jpg`}
                   subtitle={item.info}
                   rootClassName={`rootClassName1${item.id}`}
                   ></GalleryCard11>

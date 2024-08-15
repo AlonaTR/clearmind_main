@@ -183,6 +183,7 @@ class ItemDetailView(viewsets.ReadOnlyModelViewSet):
         item_id = self.kwargs.get('pk')
         return Data.objects.get(id=item_id)
 
+
 class MeditationDataView(viewsets.ModelViewSet):
     queryset = Data.objects.filter(type=Data.MEDITATION)  
     serializer_class = DataSerializer
