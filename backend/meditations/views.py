@@ -87,17 +87,18 @@ def update_user_view(request):
     else:
         return JsonResponse({'status': 'error', 'message': 'Invalid request'}, status=400)
 
-
+    
 def user_activity_meditation(request):
-    user_activities = UserActivity.objects.filter(user=request.user, type=UserActivity.MEDITATION)
+    user_activities = UserActivity.objects.filter(user=request.user, name__type=Data.MEDITATION)
     if not user_activities.exists():
-        return JsonResponse([{'type': UserActivity.MEDITATION, 'count': 0}], safe=False)
+        return JsonResponse([{'type': Data.MEDITATION, 'count': 0}], safe=False)
     else:
-        activities_grouped_by_type = user_activities.values('type').annotate(
-            count=Count('type')
+        activities_grouped_by_type = user_activities.values('name__type').annotate(
+            count=Count('name__type')
         )
         activity_data = list(activities_grouped_by_type)
         return JsonResponse(activity_data, safe=False)
+
 
 def user_activity_affirmation(request):
     user_activities = UserActivity.objects.filter(user=request.user, type=UserActivity.AFFIRMATION)
@@ -167,11 +168,11 @@ def record_activity_view(request):
         if user.is_authenticated:
             data = json.loads(request.body)
             date = data.get('date')
-            type = data.get('type')
+            name = data.get('name')
             
             # Check if a similar record already exists
-            if not UserActivity.objects.filter(user=user, date=date, type=type).exists():
-                UserActivity.objects.create(user=user, date=date, type=type)
+            if not UserActivity.objects.filter(user=user, date=date, name=name).exists():
+                UserActivity.objects.create(user=user, date=date, name=name)
                 return JsonResponse({'status': 'success'}, status=201)
         return JsonResponse({'status': 'error', 'message': 'User is not authenticated'}, status=401)
 

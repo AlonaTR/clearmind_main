@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-$cd@^95(qmuvsfq4rxzp1#9^-wvdzz&g7i#j16u8n30pmy5f=o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'backend-bold-tree-2604.fly.dev', '127.0.0.1']
 
 
 CORS_ALLOWED_ORIGINS = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'clearmind.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],  # Serve the React index.html
+        'DIRS': [os.path.join(BASE_DIR, 'build')], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

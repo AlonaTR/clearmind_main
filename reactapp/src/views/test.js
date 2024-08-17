@@ -25,7 +25,7 @@ const Test = (props) => {
     // Fetch test questions from the backend
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/test-questions');
+        const response = await axios.get('/api/test-questions');
         setQuestions(response.data);
       } catch (error) {
         console.error('Error fetching test questions:', error);
@@ -52,7 +52,7 @@ const Test = (props) => {
       setShowScore(true); 
   
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/recommendations/${score}`);
+        const response = await axios.get(`/api/recommendations/${score}`);
         setRecommendations(response.data); 
       } catch (error) {
         console.error('Error fetching recommendations:', error);

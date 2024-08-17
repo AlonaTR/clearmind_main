@@ -48,7 +48,7 @@ const LogIn = (props) => {
   const handleLogin = async (userInfo) => {
     console.log('handleLogin called with:', userInfo);
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/login/', {
+      const response = await fetch('/api/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ const LogIn = (props) => {
     }
   
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/register/', {
+      const response = await fetch('/api/register/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

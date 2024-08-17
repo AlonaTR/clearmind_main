@@ -35,7 +35,7 @@ const Item = (props) => {
   useEffect(() => {
     const fetchItemData = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/items/${itemid}/`); // Make sure to add the trailing slash
+        const response = await axios.get(`/api/items/${itemid}/`); // Make sure to add the trailing slash
         setItem(response.data);
         setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
@@ -78,9 +78,9 @@ const Item = (props) => {
   // Function to handle recording user activity
   const recordUserActivity = async () => {
     try {
-      await axios.post('http://127.0.0.1:8000/api/record-activity/', {
+      await axios.post('/api/record-activity/', {
         user: user,
-        type: item.type,
+        name: item.id,
         date: getCurrentDate()
       });
     } catch (error) {

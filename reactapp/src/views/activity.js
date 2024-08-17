@@ -23,7 +23,7 @@ const Activity = (props) => {
   
     const fetchCalendarData = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/user-activity-calendar',{
+        const response = await axios.get('/api/user-activity-calendar',{
           user: user
         }); 
         console.log('Response data:', response.data);
@@ -36,7 +36,7 @@ const Activity = (props) => {
 
     const fetchCountMeditation = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/user-activity-meditation',{
+        const response = await axios.get('/api/user-activity-meditation',{
             user: user
           }); 
         console.log('Response data:', response.data);
@@ -48,7 +48,7 @@ const Activity = (props) => {
 
     const fetchCountAffirmation = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/user-activity-affirmation',{
+        const response = await axios.get('/api/user-activity-affirmation',{
             user: user
           }); 
         console.log('Response data:', response.data);
@@ -60,7 +60,7 @@ const Activity = (props) => {
 
     const fetchCountBreathing = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/user-activity-breathing',{
+        const response = await axios.get('/api/user-activity-breathing',{
             user: user
           }); 
         console.log('Response data:', response.data);
