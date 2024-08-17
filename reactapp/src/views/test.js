@@ -52,7 +52,7 @@ const Test = (props) => {
       setShowScore(true); 
   
       try {
-        const response = await axios.get(`/api/recommendations/${score}`);
+        const response = await axios.get(`/api/recommendations/${score}/`);
         setRecommendations(response.data); 
       } catch (error) {
         console.error('Error fetching recommendations:', error);
@@ -105,62 +105,6 @@ const Test = (props) => {
                   You need to answer a few questions 
                 </span>
                 <br></br>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
               </span>
             </div>
             <div className="test-test">
@@ -187,6 +131,7 @@ const Test = (props) => {
                           <GalleryCard11
                           title={item.name}
                           imageSrc={item.image}
+                          // imageSrc={`https://img.youtube.com/vi/${item.video_id}/maxresdefault.jpg`}
                           subtitle={item.info}
                           rootClassName={`rootClassName1${item.id}`}
                           ></GalleryCard11>

@@ -1,3 +1,4 @@
+import random
 from django.shortcuts import render
 from .models import *
 from rest_framework import viewsets
@@ -101,24 +102,24 @@ def user_activity_meditation(request):
 
 
 def user_activity_affirmation(request):
-    user_activities = UserActivity.objects.filter(user=request.user, type=UserActivity.AFFIRMATION)
+    user_activities = UserActivity.objects.filter(user=request.user, name__type=UserActivity.AFFIRMATION)
     if not user_activities.exists():
         return JsonResponse([{'type': UserActivity.AFFIRMATION, 'count': 0}], safe=False)
     else:
-        activities_grouped_by_type = user_activities.values('type').annotate(
-            count=Count('type')
+        activities_grouped_by_type = user_activities.values('name__type').annotate(
+            count=Count('name__type')
         )
         activity_data = list(activities_grouped_by_type)
         return JsonResponse(activity_data, safe=False)
 
 
 def user_activity_breathing(request):
-    user_activities = UserActivity.objects.filter(user=request.user, type=UserActivity.BREATHING)
+    user_activities = UserActivity.objects.filter(user=request.user, name__type=UserActivity.BREATHING)
     if not user_activities.exists():
         return JsonResponse([{'type': UserActivity.BREATHING, 'count': 0}], safe=False)
     else:
-        activities_grouped_by_type = user_activities.values('type').annotate(
-            count=Count('type')
+        activities_grouped_by_type = user_activities.values('name__type').annotate(
+            count=Count('name__type')
         )
         activity_data = list(activities_grouped_by_type)
         return JsonResponse(activity_data, safe=False)
@@ -155,6 +156,11 @@ def user_activity_calendar(request):
         if not any(activity['date'] == first_date_period for activity in activity_data):
             # If the first date doesn't exist, append it with count and level as 0
             activity_data.insert(0,{'date': datetime.strptime(first_date_period, '%Y-%m-%d').date(), 'count': 0, 'level': 0})
+
+        # Check if today's date exists in the activity data
+        if not any(activity['date'] == today for activity in activity_data):
+            # If today's date doesn't exist, append it with count and level as 0
+            activity_data.append({'date': today, 'count': 0, 'level': 0})
 
         return JsonResponse(activity_data, safe=False)
 
@@ -220,6 +226,12 @@ def oneitem_view(request, itemid):
 @api_view(['GET'])
 def get_recommendations(request, score):
     # Adjusting the range [score-1, score+1]
+    if score < 0 :
+        score *=-1
+
+    if score < 6:
+        score = random.randint(6, 20)
+
     queryset = Data.objects.filter(test_result__gte=score-1, test_result__lte=score+1)[:2]
     serializer = DataSerializer(queryset, many=True)
     return Response(serializer.data)
