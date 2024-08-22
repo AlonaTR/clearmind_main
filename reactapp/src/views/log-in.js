@@ -154,7 +154,7 @@ const LogIn = (props) => {
               <LogInForm
                 rootClassName="log-in-form-root-class-name"
                 onLogin={handleLogin} 
-                heroSubHeading2={loginError && loginError[0]}
+                heroSubHeading2={loginError}
               />
             )}
             </div>

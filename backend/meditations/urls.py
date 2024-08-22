@@ -6,6 +6,8 @@ from rest_framework import routers
 from .views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from django.shortcuts import redirect
+
 
 router = routers.DefaultRouter()
 router.register(r'meditation', MeditationDataView)
@@ -18,6 +20,7 @@ router.register(r'items', ItemDetailView, basename='item')
 
 urlpatterns = [
     path('admin/', admin.site.urls),   
+    path('', lambda request: redirect('/home', permanent=False)),
     path('home',views.main, name ='main'),
     path('allitems',views.main, name ='main'),
     path('test',views.main, name ='main'),

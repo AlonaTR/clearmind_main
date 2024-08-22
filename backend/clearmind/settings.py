@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-$cd@^95(qmuvsfq4rxzp1#9^-wvdzz&g7i#j16u8n30pmy5f=o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'backend-bold-tree-2604.fly.dev', '127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'clearmind.fly.dev', '127.0.0.1']
 
 
 CORS_ALLOWED_ORIGINS = [

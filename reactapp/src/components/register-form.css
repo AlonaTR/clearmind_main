@@ -8,20 +8,9 @@
 }
 
 .register-form-input {
-  margin-bottom: 20px; 
+  margin-top: 20px; 
 }
 
-
-
-.register-form-details-image {
-  width: var(--dl-size-size-large);
-  height: var(--dl-size-size-large);
-  align-self: center;
-  object-fit: cover;
-  margin-left: 0px;
-  border-radius: var(--dl-radius-radius-round);
-  margin-bottom: var(--dl-space-space-unit);
-}
 .register-form-text-username {
   color: var(--dl-color-gray-white);
   font-size: 13px;
@@ -34,7 +23,7 @@
   border-width: 0px;
   border-radius: 45px;
 }
-.register-form-error-username {
+.error-message {
   color: var(--dl-color-danger-700);
   font-size: 11px;
   text-align: center;
@@ -53,12 +42,7 @@
   border-color: var(--dl-color-gray-white);
   border-radius: 45px;
 }
-.register-form-error-email {
-  color: var(--dl-color-danger-700);
-  font-size: 11px;
-  text-align: center;
-  line-height: 1.6;
-}
+
 .register-form-text-password {
   color: var(--dl-color-gray-white);
   font-size: 13px;
@@ -71,12 +55,7 @@
   border-color: var(--dl-color-gray-white);
   border-radius: 45px;
 }
-.register-form-error-password {
-  color: var(--dl-color-danger-700);
-  font-size: 11px;
-  text-align: center;
-  line-height: 1.6;
-}
+
 .register-form-text-password2 {
   color: var(--dl-color-gray-white);
   font-size: 13px;
@@ -89,12 +68,7 @@
   border-color: var(--dl-color-gray-white);
   border-radius: 45px;
 }
-.register-form-error-password2 {
-  color: var(--dl-color-danger-700);
-  font-size: 11px;
-  text-align: center;
-  line-height: 1.6;
-}
+
 
 @media(max-width: 1200px) {
   .register-form-container {
@@ -117,7 +91,7 @@
   .register-form-input-username {
     border-color: var(--dl-color-gray-white);
   }
-  .register-form-error-username {
+  .error-message {
     color: var(--dl-color-danger-700);
     opacity: 1;
     font-size: 11px;
@@ -132,11 +106,7 @@
   .register-form-input-email {
     border-color: var(--dl-color-gray-white);
   }
-  .register-form-error-email {
-    color: var(--dl-color-danger-700);
-    font-size: 11px;
-    margin-bottom: 0px;
-  }
+
   .register-form-text-password {
     font-size: 11px;
     align-self: flex-start;
@@ -145,11 +115,7 @@
   .register-form-input-password {
     border-color: var(--dl-color-gray-white);
   }
-  .register-form-error-password {
-    color: var(--dl-color-danger-700);
-    font-size: 11px;
-    margin-bottom: 0px;
-  }
+
   .register-form-text-password2 {
     font-size: 11px;
     align-self: flex-start;
@@ -158,10 +124,7 @@
   .register-form-input-password2 {
     border-color: var(--dl-color-gray-white);
   }
-  .register-form-error-password2 {
-    color: var(--dl-color-danger-700);
-    font-size: 11px;
-  }
+
 }
 @media(max-width: 991px) {
   .register-form-text-username {
@@ -171,7 +134,7 @@
     line-height: 1.6;
     padding-left: var(--dl-space-space-twounits);
   }
-  .register-form-error-username {
+  .error-message {
     color: var(--dl-color-danger-700);
     font-size: 11px;
     text-align: center;
@@ -187,14 +150,7 @@
     line-height: 1.6;
     padding-left: var(--dl-space-space-twounits);
   }
-  .register-form-error-email {
-    color: var(--dl-color-danger-700);
-    font-size: 11px;
-    text-align: center;
-    line-height: 1.6;
-    padding-left: var(--dl-space-space-threeunits);
-    padding-right: var(--dl-space-space-threeunits);
-  }
+
   .register-form-text-password {
     color: var(--dl-color-gray-white);
     font-size: 11px;
@@ -203,14 +159,7 @@
     padding-top: 0px;
     padding-left: var(--dl-space-space-twounits);
   }
-  .register-form-error-password {
-    color: var(--dl-color-danger-700);
-    font-size: 11px;
-    text-align: center;
-    line-height: 1.6;
-    padding-left: var(--dl-space-space-threeunits);
-    padding-right: var(--dl-space-space-threeunits);
-  }
+
   .register-form-text-password2 {
     color: var(--dl-color-gray-white);
     font-size: 11px;
@@ -218,34 +167,14 @@
     line-height: 1.6;
     padding-left: var(--dl-space-space-twounits);
   }
-  .register-form-error-password2 {
-    color: var(--dl-color-danger-700);
-    font-size: 11px;
-    text-align: center;
-    line-height: 1.6;
-    padding-left: var(--dl-space-space-threeunits);
-    padding-right: var(--dl-space-space-threeunits);
-  }
+
 }
 @media(max-width: 767px) {
   .register-form-details-image {
     margin-top: var(--dl-space-space-threeunits);
     margin-left: 0px;
   }
-  .register-form-error-username {
-    padding-left: var(--dl-space-space-unit);
-    padding-right: var(--dl-space-space-unit);
-  }
-  
-  .register-form-error-email {
-    padding-left: var(--dl-space-space-unit);
-    padding-right: var(--dl-space-space-unit);
-  }
-  .register-form-error-password {
-    padding-left: var(--dl-space-space-unit);
-    padding-right: var(--dl-space-space-unit);
-  }
-  .register-form-error-password2 {
+  .error-message{
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
   }

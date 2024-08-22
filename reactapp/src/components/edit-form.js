@@ -98,7 +98,7 @@ const EditForm = (props) => {
             {errors.username && <span className="edit-form-error-name">{errors.username}</span>}
             <span className="edit-form-text-email">{props.heroSubHeading}</span>
             <input
-              type="text"
+              type="email"
               name="email"
               value={formState.email}
               placeholder="Email"
@@ -159,7 +159,6 @@ EditForm.defaultProps = {
   heroSubHeading31: 'Type your Username',
   heroSubHeading: 'Type your Email',
   heroSubHeading1: 'Repeat your Password',
-  detailsImageAlt: 'image',
   rootClassName: '',
   heroSubHeading23: 'You should type your surname',
   heroSubHeading2: 'Wrong password',

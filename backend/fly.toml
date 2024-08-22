@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'backend-bold-tree-2604'
+app = 'clearmind'
 primary_region = 'waw'
 console_command = '/code/manage.py shell'
 

@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import './register-form.css'
@@ -9,66 +8,114 @@ const RegisterForm = ({
   onInputChange,
   registerError,
   rootClassName,
-  detailsImageAlt,
-  detailsImageSrc,
-  heroSubHeading31,
-  heroSubHeading24,
-  heroSubHeading3,
-  heroSubHeading23,
-  heroSubHeading,
   heroSubHeading22,
-  heroSubHeading11,
+  heroSubHeading24,
   heroSubHeading21,
-  heroSubHeading1,
+  heroSubHeading11,
+  heroSubHeading31,
+  heroSubHeading23,
   heroSubHeading2,
 }) => {
-  console.log(registerError);
+
+  
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password1: '',
+    password2: '',
+  });
+
+  const [errors, setErrors] = useState({
+    username: '',
+    email: '',
+    password1: '',
+    password2: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const validate = () => {
+    const newErrors = {
+      username: '',
+      email: '',
+      password1: '',
+      password2: '',
+    };
+
+    if (!formData.username) newErrors.username = heroSubHeading24;
+    if (!formData.email) newErrors.email = heroSubHeading22;
+    if (!formData.password1) newErrors.password1 = heroSubHeading11;
+    if (!formData.password2) newErrors.password2 = 'Confirm password cannot be empty';
+    if (formData.password1 && formData.password2 && formData.password1 !== formData.password2)
+      newErrors.password2 = heroSubHeading2;
+
+    setErrors(newErrors);
+    return Object.values(newErrors).every(error => !error);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      onRegister(formData);
+    }
+  };
+
+  
   return (
-    <form onSubmit={onRegister} className={`register-form-container ${rootClassName}`}>
-      {/* <img
-        alt={detailsImageAlt}
-        src={detailsImageSrc}
-        className="register-form-details-image"
-      />
-       */}
-      <input
-        type="text"
-        name="username"
-        placeholder="Username"
-        onChange={onInputChange}
-        className="register-form-input-username register-form-input  input"
-      />
-      
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        onChange={onInputChange}
-        className="register-form-input-email register-form-input input"
-      />
-      <input
-        type="password"
-        name="password1"
-        placeholder="Password"
-        onChange={onInputChange}
-        className="register-form-input-password  register-form-input input"
-      />
-      <input
-        type="password"
-        name="password2"
-        placeholder="Confirm Password"
-        onChange={onInputChange}
-        className="register-form-input-password2 register-form-input input"
-      />
-      {registerError && Object.keys(registerError).map((key) => (
-        <div key={key} className="register-form-error">
-          {registerError[key]}
-        </div>
-      ))}
-      <div className="log-in-btn-group2">
+    <form onSubmit={handleSubmit} className={`register-form-container ${rootClassName}`}>
+    <input
+      type="text"
+      name="username"
+      placeholder="Username"
+      value={formData.username}
+      onChange={handleInputChange}
+      className="register-form-input-username register-form-input input"
+    />
+    {errors.username && <div className="error-message">{errors.username}</div>}
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      value={formData.email}
+      onChange={handleInputChange}
+      className="register-form-input-email register-form-input input"
+    />
+    {errors.email && <div className="error-message">{errors.email}</div>}
+
+    <input
+      type="password"
+      name="password1"
+      placeholder="Password"
+      value={formData.password1}
+      onChange={handleInputChange}
+      className="register-form-input-password register-form-input input"
+    />
+    {errors.password1 && <div className="error-message">{errors.password1}</div>}
+
+    <input
+      type="password"
+      name="password2"
+      placeholder="Confirm Password"
+      value={formData.password2}
+      onChange={handleInputChange}
+      className="register-form-input-password2 register-form-input input"
+    />
+    {errors.password2 && <div className="error-message">{errors.password2}</div>}
+
+    <div className="register-form-error">
+      {registerError}
+    </div>
+    <div className="log-in-btn-group2">
       <button type="submit" className="log-in-home-button button">Register</button>
-      </div>
-    </form>
+    </div>
+  </form>
   )
 }
 

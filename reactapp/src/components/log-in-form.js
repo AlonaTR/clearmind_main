@@ -5,12 +5,31 @@ import './log-in-form.css'
 const LogInForm = (props) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
 
   const handleSubmit = (event) => {
     event.preventDefault()
+
+    // Reset errors
+    setError('')
+
+    // Validation
+    let isValid = true
+    let errorMessage = ''
+    if (username.trim() === '' || password.trim() === '') {
+      errorMessage = 'Input fields cannot be empty'
+      isValid = false
+    } 
+
+    if (!isValid) {
+      setError(errorMessage)
+      return
+    }
+
     // Pass the username and password to the parent component's login handler
     props.onLogin({ username: username, password: password })
   }
+
   return (
     <form className={`log-in-form-container ${props.rootClassName}`} onSubmit={handleSubmit}>
       <span className="log-in-form-text-email">{props.heroSubHeading}</span>
@@ -29,8 +48,8 @@ const LogInForm = (props) => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <span className="log-in-form-hero-sub-heading">
-        {props.heroSubHeading2}
+      <span className="error-message ">
+        {error || props.heroSubHeading2}
       </span>
       
       <div className="log-in-btn-group2">

@@ -31,10 +31,11 @@
   border-color: var(--dl-color-gray-white);
   border-radius: 45px;
 }
-.log-in-form-hero-sub-heading {
+
+
+.error-message {
   color: var(--dl-color-danger-700);
-  font-size: 16px;
-  align-self: center;
+  font-size: 11px;
   text-align: center;
   line-height: 1.6;
 }
@@ -63,9 +64,13 @@
     border-color: var(--dl-color-gray-white);
     margin-bottom: var(--dl-space-space-unit);
   }
-  .log-in-form-hero-sub-heading {
+
+
+  .error-message {
     color: var(--dl-color-danger-700);
-    font-size: 16px;
+    opacity: 1;
+    font-size: 11px;
+    margin-bottom: 0px;
   }
 }
 @media(max-width: 991px) {
@@ -84,9 +89,10 @@
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
   }
-  .log-in-form-hero-sub-heading {
+  
+  .error-message {
     color: var(--dl-color-danger-700);
-    font-size: 15px;
+    font-size: 11px;
     text-align: center;
     line-height: 1.6;
     padding-left: var(--dl-space-space-threeunits);
@@ -102,7 +108,8 @@
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
   }
-  .log-in-form-hero-sub-heading {
+
+  .error-message{
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
   }
